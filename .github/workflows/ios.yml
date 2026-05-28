@@ -20,11 +20,10 @@ jobs:
           # cp -R /usr/include/X11 include/
           # cp -R /usr/include/xcb include/
           # cp -R /usr/include/GL/* include/GL/
-          pip3 install mako --break-system-packages
+          /Library/Frameworks/Python.framework/Version/Current/bin/python -m pip install mako --break-system-packages
           # -Dglx=gallium-xlib \
           # -Dglx=dri
           meson build-ios-aarch64 \
-            -Dpython=/opt/homebrew/bin/python3 \
             --prefix="/tmp/zink" \
             --cross-file ios-aarch64 \
             -Dmoltenvk-dir=../../../../MoltenVK/MoltenVK \
