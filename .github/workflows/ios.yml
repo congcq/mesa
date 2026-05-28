@@ -24,6 +24,7 @@ jobs:
           # -Dglx=gallium-xlib \
           # -Dglx=dri
           meson build-ios-aarch64 \
+            -Dpython=/opt/homebrew/bin/python3 \
             --prefix="/tmp/zink" \
             --cross-file ios-aarch64 \
             -Dmoltenvk-dir=../../../../MoltenVK/MoltenVK \
